@@ -204,27 +204,26 @@ main {
 	display: inline-block;
 	padding: 0.25em;
 }
-
+ h2{
+	 font-weight: normal;
+ }
 .content__title {
 	font-size: 50px;
 	font-family:"RalewayRegular" , sans-serif;
 	color: rgb(0, 0, 0);
-font-weight: normal;
-
 	line-height: 0.609;
 	text-align: left;
 	position: absolute;
 	left: 227.938px;
 	top: 328.323px;
 	z-index: 199;
-
+	font-weight: normal;
 }
 
 .content__tagline {
 	font-size: 18px;
 	font-family: "LMRomanSlant10-Regular", sans-serif;
 	color: rgb(0, 0, 0);
-	margin-top: 40px;
 	line-height: 1.389;
 	position: absolute;
 	left: 228.844px;
@@ -232,6 +231,14 @@ font-weight: normal;
 	width: 444px;
 	z-index: 199;
 
+}
+.content__tagline::before{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 80px;
+	background-color: black;
+	z-index: 199;
 }
 
 .action {
@@ -333,6 +340,7 @@ font-weight: normal;
 
 .menu__item--1 .menu__item-inner {
 	background: var(--color-bg-item1);
+
 }
 .menu__item--2 .menu__item-inner {
 	background: var(--color-bg-item2);
@@ -361,18 +369,18 @@ font-weight: normal;
 	transform: translate3d(0,100%,0);
 }
 
-.menu__item-map {
+.menu__item-text {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: url(../img/2.jpg) no-repeat 50% 50%;
-	background-size: cover;
+	/*background: url(../img/2.jpg) no-repeat 50% 50%;*/
+	/*background-size: cover;*/
 	transition: transform 0.8s cubic-bezier(0.2,1,0.8,1);
 }
 
-.menu__item-inner:hover .menu__item-map {
+.menu__item-inner:hover .menu__item-text {
 	transform: scale3d(1.1,1.1,1);
 }
 
@@ -477,7 +485,7 @@ font-weight: normal;
 		position: fixed;
 		top: 0;
 		left: 0;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 40% 60%;
 		grid-template-rows: 100% 100%;
 		grid-template-areas: 
             "item1 item2 "

@@ -161,7 +161,7 @@
 	// Initialize the Menu.
     const menu = new Menu(document.querySelector('nav.menu'));
 
-    // Preload images.
+    // Preload img.
     imagesLoaded(document.querySelector('.background'), {background: true}, () => document.body.classList.remove('loading'));
     
     // extra stuff..
