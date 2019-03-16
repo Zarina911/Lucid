@@ -1,0 +1,384 @@
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;margin:0.67em 0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}dfn{font-style:italic;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}pre{white-space:pre-wrap;}q{quotes:"\201C" "\201D" "\2018" "\2019";}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'RalewayItalic';
+	src: url('fonts/RalewayItalic.eot');
+	src: url('fonts/RalewayItalic.eot') format('embedded-opentype'),
+	url('fonts/RalewayItalic.woff2') format('woff2'),
+	url('fonts/RalewayItalic.woff') format('woff'),
+	url('fonts/RalewayItalic.ttf') format('truetype'),
+	url('fonts/RalewayItalic.svg#RalewayItalic') format('svg');
+}
+
+body {
+	overflow: hidden;
+	background-color: #efefef!important;
+
+}
+
+/* Page Loader */
+/*.js .loading::before {*/
+	/*content: '';*/
+	/*position: fixed;*/
+	/*z-index: 100000;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*background: var(--color-bg);*/
+/*}*/
+
+/*.js .loading::after {*/
+	/*content: '';*/
+	/*position: fixed;*/
+	/*z-index: 100000;*/
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*width: 60px;*/
+	/*height: 60px;*/
+	/*margin: -30px 0 0 -30px;*/
+	/*pointer-events: none;*/
+	/*border-radius: 50%;*/
+	/*opacity: 0.4;*/
+	/*background: var(--color-link);*/
+	/*animation: loaderAnim 0.7s linear infinite alternate forwards;*/
+/*}*/
+
+/*@keyframes loaderAnim {*/
+	/*to {*/
+		/*opacity: 1;*/
+		/*transform: scale3d(0.5,0.5,1);*/
+	/*}*/
+/*}*/
+
+
+a {
+	text-decoration: none;
+	color: var(--color-link);
+	outline: none;
+	transition: color 0.2s;
+}
+
+a:hover,
+a:focus {
+	color: var(--color-link-hover);
+	text-decoration: none;
+}
+
+button:focus,
+a:focus {
+	outline: none;
+}
+
+main {
+	position: relative;
+	width: 100%;
+}
+
+.background {
+	perspective: 1000px;
+}
+
+.background,
+.background__copy {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: url(../img/1.jpg);
+	background-position: 50% 0%;
+	background-size: cover;
+	z-index: 1;
+}
+.background,
+.background__copy{
+	animation: move_div_1 2s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	opacity: 0;
+}
+@keyframes move_div_1 {
+	0%   { opacity: 0;}
+	100% { opacity: 1;}
+}
+
+.background__copy {
+	opacity: 0.3;
+}
+.pre_loader{
+	width: 100%;
+	height: 100%;
+	background-color: #efefef;
+	position: absolute;
+	z-index: 200;
+	animation: move_div 1s;
+	/*animation-duration: 1s;*/
+	/*animation-delay: 2s;*/
+	right: -100%;
+}
+
+@keyframes move_div {
+	0%   {right: 0;}
+	100% {right: -100%;}
+}
+
+
+
+
+.content__title {
+	font-size: 50px;
+	font-family:"RalewayRegular" , serif;
+	color: rgb(0, 0, 0);
+	line-height: 0.609;
+	text-align: left;
+	position: absolute;
+	left: 228px;
+	top: 328px;
+	z-index: 199;
+	font-weight: normal;
+	animation: move_div_2 2s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	opacity: 0;
+}
+
+@keyframes move_div_2 {
+	0%   {top: -100px; opacity: 0.5;}
+	100% {top: 328px; opacity: 1;}
+}
+
+
+
+.content__tagline {
+	font-size: 18px;
+	font-family: "LMRomanSlant10" , serif;
+	color: rgb(0, 0, 0);
+	line-height: 1.389;
+	position: absolute;
+	padding-top: 30px;
+	left: 228px;
+	top: 393px;
+	width: 444px;
+	z-index: 199;
+	animation: move_div_3 2s;
+	animation-delay: 2s;
+	animation-fill-mode: both;
+	opacity: 1;
+}
+
+@keyframes move_div_3 {
+	0%   {left: 0; opacity: 0;}
+	100% {left: 228px; opacity: 1;}
+}
+
+.content__tagline::after{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 80px;
+	background-color: black;
+	margin-top: 40px;
+	margin-left:5px;
+	z-index: 199;
+}
+.action {
+	background: none;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 0;
+}
+
+.action--menu {
+	pointer-events: auto;
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	z-index: 1000;
+}
+
+.fa {
+	color: black;
+	font-size: 20px;
+	margin-left: 10px;
+}
+.action--menu:before{
+	content: "MENU";
+	font-size: 18px;
+	color: #000000;
+	margin-left: 10px;
+
+}
+.action--close:before {
+	content: "MENU";
+	font-size: 18px;
+	color: #000000;
+	transform: rotate(180deg);
+	display: block;
+	margin-top: 1px;
+	top: -6px;
+	left: 6px;
+	position: relative;
+}
+.action--menu{
+	animation: move_div_4 2s;
+	animation-delay: 2.5s;
+	animation-fill-mode: backwards;
+	opacity: 1;
+}
+
+@keyframes move_div_4 {
+	0%   {top: -100px; opacity: 0;}
+	100% {top: 6px; opacity: 1;}
+}
+
+.menu--open .action--menu {
+	pointer-events: none;
+}
+
+.action--close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.75rem;
+	z-index: 1000;
+	opacity: 0;
+	padding: 0 0.5rem;
+}
+
+.menu {
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(3,33.33%);
+	pointer-events: none;
+}
+
+.menu--open {
+	pointer-events: auto;
+}
+
+.menu__item {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.menu__item-inner {
+	overflow: hidden;
+	transform: translate3d(100%,0,0);
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.menu__item-text {
+	position: absolute;
+	background-size: cover;
+	transition: transform 0.8s cubic-bezier(0.2,1,0.8,1);
+	color: black;
+	width: 611px;
+	height: 267px;
+	text-align: left;
+
+}
+.menu__item-text .name{
+	font-family: "Raleway" , serif;
+	font-size: 50px;
+	font-weight: normal;
+	text-align: right;
+	padding-right: 70px;
+}
+.name::after{
+	content: "";
+	display: block;
+	width: 80px;
+	height: 1px;
+	background-color: black;
+	margin-top: -25px;
+	z-index: 199;
+}
+.menu__item-text .excepteur{
+	font-family: "LMRomanSlant10", serif;
+	font-size: 18px;
+	font-style: italic;
+	margin-top: 40px;
+	margin-bottom: 70px;
+}
+
+.menu__item-inner:hover .menu__item-text {
+	transform: scale3d(1.1,1.1,1);
+}
+.social a{
+	padding-left: 0;
+}
+.btn-social-icon {
+	list-style: none;
+	position: relative;
+	margin-left: 20px;
+	text-align: left;
+}
+
+.fa-facebook {
+	background-color: gray;
+	width: 33px;
+	height: 33px;
+	color: white;
+	padding-left: 11px;
+	padding-top: 5px;
+}
+.fa-facebook:hover {
+	background-color: black;
+	transform: scale(1.5);
+}
+.fa-twitter {
+	background-color: gray;
+	width: 33px;
+	height: 33px;
+	color: white;
+	padding-left: 8px;
+	padding-top: 5px;
+}
+.fa-twitter:hover{
+	background-color: black;
+	transform: scale(1.5);
+}
+.fa-instagram {
+	background-color: gray;
+	width: 33px;
+	height: 33px;
+	color: white;
+	padding-left: 9px;
+	padding-top: 5px;
+}
+.fa-instagram:hover {
+	background-color: black;
+	transform: scale(1.5);
+}
+.fa-pinterest {
+	background-color: gray;
+	width: 33px;
+	height: 33px;
+	color: white;
+	padding-left: 8px;
+	padding-top: 5px;
+}
+.fa-pinterest:hover{
+	background-color: black;
+	transform: scale(1.5);
+}
