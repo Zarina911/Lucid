@@ -158,19 +158,19 @@ h1 {
     opacity: 1.0;
 }
 
+.rm_nav a.rm_prev {
+    background: transparent url(../images/prev1.png) no-repeat top left;
+    left: 0;
+    margin-top: 140px;
+    width: 100%;
+}
+
 .rm_nav a.rm_next {
     background: transparent url(../images/next1.png) no-repeat top right;
     right: 0;
     margin-top: 140px;
     width: 100%;
 
-}
-
-.rm_nav a.rm_prev {
-    background: transparent url(../images/prev1.png) no-repeat top left;
-    left: 0;
-    margin-top: 140px;
-    width: 100%;
 }
 
 .rm_controls {
@@ -190,7 +190,9 @@ h1 {
     float: left;
     line-height: 20px;
 }
-
+.rm_nav a.rm_next:hover {
+    opacity: 1.0;
+}
 .rm_controls a:hover {
     opacity: 1.0;
 }
