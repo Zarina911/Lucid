@@ -1,0 +1,55 @@
+//font-family: 'Quicksand', sans-serif;
+//font-family: 'Source Sans Pro', sans-serif;
+
+body {
+  background: url("img/bg_1.png") no-repeat center;
+  background-size: cover;
+  min-height: 639px;
+}
+
+nav {
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 3.625;
+  ul {
+    li {
+      position: relative;
+      padding-left: 0;
+      a {
+        padding-left: 0;
+      }
+      &:after {
+        content: "";
+        width: 42px;
+        height: 2px;
+        background-color: #008ed6;
+        display: block;
+        opacity: 0;
+        transition: 0.3;
+
+      }
+      &:before {
+        content: "";
+        background-color: #0f253c;
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        z-index: 2;
+      }
+      &:hover {
+        a {
+          background-color: transparent!important;
+        }
+        &:after {
+          opacity: 1;
+        }
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+

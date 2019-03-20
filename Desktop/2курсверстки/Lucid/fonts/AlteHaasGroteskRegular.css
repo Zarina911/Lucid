@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AlteHaasGroteskRegular';
+    src: url('fonts/AlteHaasGroteskRegular.eot');
+    src: url('fonts/AlteHaasGroteskRegular.eot') format('embedded-opentype'),
+         url('fonts/AlteHaasGroteskRegular.woff2') format('woff2'),
+         url('fonts/AlteHaasGroteskRegular.woff') format('woff'),
+         url('fonts/AlteHaasGroteskRegular.ttf') format('truetype'),
+         url('fonts/AlteHaasGroteskRegular.svg#AlteHaasGroteskRegular') format('svg');
+}
