@@ -1,56 +1,186 @@
 //font-family: 'Quicksand', sans-serif;
 //font-family: 'Source Sans Pro', sans-serif;
+$blue: #037ebd;
+$grey: #616165;
+$white: #ffffff;
+
+@mixin big {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 3.429;
+
+  font-weight: bold;
+}
 
 body {
+
+}
+
+.top_block {
   background: url("img/bg_1.png") no-repeat center;
   background-size: cover;
   min-height: 639px;
-}
-
-nav {
-  font-size: 16px;
-  font-family: 'Source Sans Pro', sans-serif;
-  line-height: 3.625;
-  ul {
-    li {
-      position: relative;
-      padding-left: 0;
-      a {
+  nav {
+    ul {
+      li {
+        position: relative;
         padding-left: 0;
-      }
-      &:after {
-        content: "";
-        width: 42px;
-        height: 2px;
-        background-color: #008ed6;
-        display: block;
-        opacity: 0;
-        transition: 0.3;
-
-      }
-      &:before {
-        content: "";
-        background-color: #0f253c;
-        width: 2px;
-        height: 2px;
-        position: absolute;
-        bottom: 0;
-        left: 30%;
-        z-index: 2;
-      }
-      &:hover {
         a {
-          background-color: transparent!important;
+          padding-left: 0;
+          color: $white;
+          padding-right: 25px;
         }
         &:after {
-          opacity: 1;
+          width: 42px;
+          height: 2px;
+          background-color: #008ed6;
+          display: block;
+          content: "";
+          opacity: 0;
+          transition: 0.3s;
+          position: relative;
+          z-index: 1;
         }
         &:before {
-          opacity: 1;
+          content: "";
+          background-color: #16151b;
+          height: 2px;
+          width: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 20px;
+          z-index: 2;
+          opacity: 0;
+        }
+        &:hover {
+          a {
+            background-color: transparent;
+          }
+          &:after {
+            opacity: 1;
+          }
+          &:before {
+            opacity: 1;
+          }
         }
       }
     }
   }
 }
+.nav>li>a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+//container introducing
+
+.item_1 {
+  padding-top: 100px;
+
+  h5 {
+    @include big;
+    color: $blue;
+  }
+  h1{
+    color: $white;
+    font-size: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  p{
+    color: $grey;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.7;
+    margin-bottom: 64px;
+  }
+  .btn{
+    width: 160px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    background-color: rgba(0, 142, 214, 0);
+    @include big;
+    color: $white;
+    padding: 0;
+    margin-right: 20px;
+  }
+  .btn:hover{
+    background-color: $blue;
+  }
+  .img_phones {
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//nav {
+//  font-size: 16px;
+//  font-family: 'Source Sans Pro', sans-serif;
+//  line-height: 3.625;
+//
+//  ul {
+//    li {
+//      position: relative;
+//      padding-left: 0;
+//      a {
+//        padding-left: 0;
+//      }
+//      &:after {
+//        content: "";
+//        width: 42px;
+//        height: 2px;
+//        background-color: #037ebd;
+//        display: block;
+//        opacity: 0;
+//        transition: 0.3s;
+//
+//      }
+//      &:before {
+//        content: "";
+//        background-color: #0f253c;
+//        width: 2px;
+//        height: 2px;
+//        position: absolute;
+//        bottom: 0;
+//        left: 30%;
+//        z-index: 2;
+//      }
+//      &:hover {
+//        a {
+//          background-color: transparent !important;
+//        }
+//        &:after {
+//          opacity: 1;
+//        }
+//        &:before {
+//          opacity: 1;
+//        }
+//      }
+//    }
+//  }
+//}
+
+
 
 

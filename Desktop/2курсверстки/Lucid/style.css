@@ -1,39 +1,81 @@
-body {
+.top_block {
   background: url("img/bg_1.png") no-repeat center;
   background-size: cover;
   min-height: 639px; }
-
-nav {
-  font-size: 16px;
-  font-family: 'Source Sans Pro', sans-serif;
-  line-height: 3.625; }
-  nav ul li {
+  .top_block nav ul li {
     position: relative;
     padding-left: 0; }
-    nav ul li a {
-      padding-left: 0; }
-    nav ul li:after {
-      content: "";
+    .top_block nav ul li a {
+      padding-left: 0;
+      color: #ffffff;
+      padding-right: 25px; }
+    .top_block nav ul li:after {
       width: 42px;
       height: 2px;
       background-color: #008ed6;
       display: block;
-      opacity: 0;
-      transition: 0.3; }
-    nav ul li:before {
       content: "";
-      background-color: #0f253c;
-      width: 2px;
+      opacity: 0;
+      transition: 0.3s;
+      position: relative;
+      z-index: 1; }
+    .top_block nav ul li:before {
+      content: "";
+      background-color: #16151b;
       height: 2px;
+      width: 2px;
       position: absolute;
       bottom: 0;
-      left: 30%;
-      z-index: 2; }
-    nav ul li:hover a {
-      background-color: transparent !important; }
-    nav ul li:hover:after {
+      left: 20px;
+      z-index: 2;
+      opacity: 0; }
+    .top_block nav ul li:hover a {
+      background-color: transparent; }
+    .top_block nav ul li:hover:after {
       opacity: 1; }
-    nav ul li:hover:before {
+    .top_block nav ul li:hover:before {
       opacity: 1; }
+
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent; }
+
+.item_1 {
+  padding-top: 100px; }
+  .item_1 h5 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 3.429;
+    font-weight: bold;
+    color: #037ebd; }
+  .item_1 h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 0;
+    margin-bottom: 28px; }
+  .item_1 p {
+    color: #616165;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.7;
+    margin-bottom: 64px; }
+  .item_1 .btn {
+    width: 160px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    background-color: rgba(0, 142, 214, 0);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 3.429;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 0;
+    margin-right: 20px; }
+  .item_1 .btn:hover {
+    background-color: #037ebd; }
 
 /*# sourceMappingURL=style.css.map */
