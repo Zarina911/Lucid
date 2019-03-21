@@ -1,3 +1,12 @@
+body {
+  background-color: #ffffff; }
+
+.change {
+  background-color: transparent; }
+
+.change_2 {
+  background-color: #861506; }
+
 .top_block {
   background: url("img/bg_1.png") no-repeat center;
   background-size: cover;

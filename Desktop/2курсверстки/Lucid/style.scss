@@ -9,13 +9,20 @@ $white: #ffffff;
   font-size: 14px;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 3.429;
-
   font-weight: bold;
 }
 
 body {
+background-color: #ffffff;
+}
+.change {
+  background-color: transparent;
+}
+.change_2 {
+  background-color: #861506;
 
 }
+
 
 .top_block {
   background: url("img/bg_1.png") no-repeat center;
@@ -181,6 +188,7 @@ body {
 //    }
 //  }
 //}
+
 
 
 
