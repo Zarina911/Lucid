@@ -8,16 +8,18 @@
     <title>Lucid</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:300,400,400i,600,600i,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
           rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="style.scss">-->
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 </head>
 <body>
@@ -46,18 +48,16 @@
                         <li><a href="#">Testimonials </a></li>
                         <li><a href="#">Pricin </a></li>
                         <li><a href="#">Contact</a></li>
-                        <li class="change"  ><a href="#">bg_color</a></li>
+                        <li class="change"><a href="#">bg_color</a></li>
                         <!--onclick="this.className = 'change_2'"-->
 
-                        <script >
+                        <script>
                             var elements = document.getElementsByClassName("change");
-                            for (var i = 0; i < elements.length; i++)
-                            {
+                            for (var i = 0; i < elements.length; i++) {
                                 elements[i].onclick = function () {
                                     var el = elements[0];
-                                    while (el)
-                                    {
-                                        if(el.tagName === "change_2"){
+                                    while (el) {
+                                        if (el.tagName === "change_2") {
                                             el.classList.remove("change");
                                         }
                                         el = el.nextSibling;
@@ -66,17 +66,7 @@
                                 };
                             }
                         </script>
-<!--<script>-->
-    <!--var elements = document.getElementsByClassName("change");-->
-    <!--var colors = ["#red, #orange, #green "];-->
-    <!--var i = 0 ; colors.length; i++)-->
-    <!--{-->
-        <!--elements[i].onclick = function () {-->
-            <!--this.classList.add("colors");-->
-        <!--};-->
-    <!--}-->
 
-<!--</script>-->
                         <!--добавить на клик изменение цвета сайта-шапки toggle-add-class js-->
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -93,7 +83,7 @@
                             at elementum magna ultricies accumsan. Cras venenatis lacus sed dolor
                             placerat tempus. Morbi blandit at neque ut imperdiet.
                         </p>
-                        <a href="#" class="btn download">download now</a>
+                        <a href="#" class="btn download" data-toggle="modal" data-target="#myModal">download now</a>
                         <a href="#" class="btn view">view features</a>
                     </div>
                 </div>
@@ -110,5 +100,89 @@
 </header>
 
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div style="clear: both; height: 400px">
+
+                                <form action="" method="post">
+                                    <h6>EXISTING USERS</h6>
+                                    <h5 class="login">LOGIN</h5>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"
+                                               style="text-transform: uppercase">Username</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1"
+                                               style="text-transform: uppercase">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-default">LOGIN</button>
+                                    <a href="#"
+                                       style="color:#4e4e4e; font-size: 12px; margin-left: 30px;font-family: 'Montserrat', sans-serif; ">FORGOT
+                                        PASSWORD?</a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="left_tabs">
+                                <h5 class="welcome">NEW USERS, WELCOME!</h5>
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation"><a href="#" aria-controls="home"
+                                                                              role="tab" data-toggle="tab">SIGN UP</a>
+                                    </li>
+                                    <li role="presentation"><a href="#" aria-controls="profile" role="tab"
+                                                               data-toggle="tab">BILLING INFO</a></li>
+                                    <li role="presentation"><a href="#" aria-controls="messages" role="tab"
+                                                               data-toggle="tab">PAYMENT</a></li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="SIGN UP"></div>
+                                    <div role="tabpanel" class="tab-pane" id="BILLING INFO"></div>
+                                    <div role="tabpanel" class="tab-pane" id="PAYMENT"></div>
+                                </div>
+
+                                <form action="" method="post">
+                                    <div class="form-group">
+                                        <label for="exampleInputUsername"
+                                               style="text-transform: uppercase">Username</label>
+                                        <input type="email" class="form-control" id="exampleInputUsername">
+                                        <label for="exampleInputEmail" style="text-transform: uppercase">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword" style="text-transform: uppercase">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputrePassword" style="text-transform: uppercase">re-enter password</label>
+                                        <input type="password" class="form-control" id="exampleInputrePassword" >
+
+                                    </div>
+
+                                    <button type="submit" class="btn btn-default">NEXT STEP</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 </body>
+
+
 </html>
