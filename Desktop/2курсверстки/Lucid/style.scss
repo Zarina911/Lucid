@@ -21,10 +21,8 @@ body {
 .change {
   background-color: transparent;
 }
-
-.change_2 {
+.change.change_2 {
   background-color: #861506;
-
 }
 
 .top_block {
@@ -127,6 +125,9 @@ body {
   font-size: 12px;
 }
 
+
+     //modal-dialog
+
 .modal-dialog {
   max-width: 1170px;
   width: 100%;
@@ -144,6 +145,7 @@ body {
             padding-left: 74px;
             padding-top: 40px;
             padding-right: 119px;
+            color: #5f5749;
             h6 {
               padding-bottom: 25px;
               font-weight: bold;
@@ -156,7 +158,7 @@ body {
               content: '';
               display: block;
               width: 110px;
-              height: 1px;
+              height: 2px;
               background-color: black;
               margin-top: 33px;
             }
@@ -168,6 +170,7 @@ body {
           width: 191px;
           height: 37px;
           border-radius: 20px;
+          font-weight: bold;
         }
       }
     }
@@ -226,24 +229,44 @@ body {
     }
   }
 }
-.left_tabs{
-  .form-control{
+
+.left_tabs {
+  .form-control {
     width: 80%;
-    background-color: #f6f6f6;
-  }
-  .form-control:nth-child(3){
-    background-color: #fbf7f1;
-  }
-  form{
-    padding-top: 10px;
+    background-color: transparent;
   }
 }
-.welcome{
+
+.welcome {
   font-family: $montserrat;
   font-size: 12px;
   padding-bottom: 5px;
   font-weight: bold;
+  color: #5f5749;
 }
+
+.new_user {
+  padding-top: 10px;
+  color: #5f5749;
+  .user {
+    background-color: #f6f6f6;
+  }
+  .em {
+    background-color: #f6f6f6;
+  }
+  .pass {
+    background-color: #fbf7f1;
+  }
+  .re_pass {
+    background-color: #fbf7f1;
+  }
+}
+.step{
+  margin-top: -10px;
+}
+
+
+
 
 
 

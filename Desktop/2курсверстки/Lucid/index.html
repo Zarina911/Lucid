@@ -51,21 +51,6 @@
                         <li class="change"><a href="#">bg_color</a></li>
                         <!--onclick="this.className = 'change_2'"-->
 
-                        <script>
-                            var elements = document.getElementsByClassName("change");
-                            for (var i = 0; i < elements.length; i++) {
-                                elements[i].onclick = function () {
-                                    var el = elements[0];
-                                    while (el) {
-                                        if (el.tagName === "change_2") {
-                                            el.classList.remove("change");
-                                        }
-                                        el = el.nextSibling;
-                                    }
-                                    this.classList.add("change_2");
-                                };
-                            }
-                        </script>
 
                         <!--добавить на клик изменение цвета сайта-шапки toggle-add-class js-->
                     </ul>
@@ -92,11 +77,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
-
 </header>
 
 
@@ -126,8 +108,11 @@
 
                                     <button type="submit" class="btn btn-default">LOGIN</button>
                                     <a href="#"
-                                       style="color:#4e4e4e; font-size: 12px; margin-left: 30px;font-family: 'Montserrat', sans-serif; ">FORGOT
-                                        PASSWORD?</a>
+                                       style="color:#4e4e4e; font-size: 12px;
+                                        margin-left: 30px;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-weight: bold">
+                                        FORGOT PASSWORD?</a>
                                 </form>
                             </div>
                         </div>
@@ -152,36 +137,44 @@
                                     <div role="tabpanel" class="tab-pane" id="PAYMENT"></div>
                                 </div>
 
-                                <form action="" method="post">
+                                <form class="new_user" action="" method="post">
                                     <div class="form-group">
                                         <label for="exampleInputUsername"
                                                style="text-transform: uppercase">Username</label>
-                                        <input type="email" class="form-control" id="exampleInputUsername">
-                                        <label for="exampleInputEmail" style="text-transform: uppercase">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail">
+                                        <input type="email"  class="form-control user" id="exampleInputUsername">
+                                        <label for="exampleInputEmail"  style="text-transform: uppercase; ">Email address</label>
+                                        <input type="email" class="form-control em" id="exampleInputEmail">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword" style="text-transform: uppercase">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword" >
+                                        <label for="exampleInputPassword"  style="text-transform: uppercase; ">Password</label>
+                                        <input type="password" class="form-control pass" id="exampleInputPassword" >
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputrePassword" style="text-transform: uppercase">re-enter password</label>
-                                        <input type="password" class="form-control" id="exampleInputrePassword" >
-
+                                        <label for="exampleInputrePassword"  style="text-transform: uppercase">re-enter password</label>
+                                        <input type="password" class="form-control re_pass" id="exampleInputrePassword" >
                                     </div>
-
-                                    <button type="submit" class="btn btn-default">NEXT STEP</button>
+                                    <button type="submit" class="btn btn-default step" >NEXT STEP</button>
                                 </form>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
+<script>
+    var elements = document.getElementsByClassName("change");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].onclick = function () {
+
+            this.classList.toggle("change_2");
+        };
+    }
+</script>
+
+
 </body>
 
 
