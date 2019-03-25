@@ -34,7 +34,9 @@ body {
   background-color: transparent; }
 
 .change.change_2 {
-  background-color: #861506; }
+  color: #861506; }
+  .change.change_2 a {
+    color: #861506; }
 
 .top_block {
   background: url("img/bg_1.png") no-repeat center;
