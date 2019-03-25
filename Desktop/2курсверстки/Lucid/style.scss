@@ -17,6 +17,18 @@ $montserrat: 'Montserrat', sans-serif;
 body {
   overflow: hidden;
 }
+//  background-color: #0f253c;
+//  animation: move_div_1 3s;
+//  animation-fill-mode: both;
+//  animation-duration: 3s;
+//  opacity: 0;
+//}
+//@keyframes move_div_1 {
+//  0%   { opacity: 0;}
+//  50%  {opacity: 0.5; }
+//  100% { opacity: 1;}
+//}
+
 .pre_loader{
   width: 100px;
   height: 100px;
@@ -28,9 +40,11 @@ body {
   padding-top: 45px;
   position: absolute;
   z-index: 5;
-  animation: move_div 12s;
+  animation: move_div 10s;
   top: 40%;
   left: -100%;
+  opacity: 1;
+  transition: all 3s ease-out;
   .come{
     transform: scale(2);
   }
@@ -39,8 +53,6 @@ body {
 @keyframes move_div {
   0%   {left: 0; transform: rotate(0deg);}
   50%  {left: 50%; transform: rotate(360deg);}
-
-
 }
 
 

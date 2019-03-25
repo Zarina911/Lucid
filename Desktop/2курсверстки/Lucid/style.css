@@ -12,9 +12,11 @@ body {
   padding-top: 45px;
   position: absolute;
   z-index: 5;
-  animation: move_div 12s;
+  animation: move_div 10s;
   top: 40%;
-  left: -100%; }
+  left: -100%;
+  opacity: 1;
+  transition: all 3s ease-out; }
   .pre_loader .come {
     transform: scale(2); }
 
