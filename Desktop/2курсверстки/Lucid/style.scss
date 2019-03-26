@@ -28,14 +28,13 @@ body {
 //  50%  {opacity: 0.5; }
 //  100% { opacity: 1;}
 //}
-
-.pre_loader{
-  width: 5%;
-  height: 15%;
+.pre_loader {
+  width: 100%;
+  height: 100%;
   background-color: #0f253c;
   color: #ffffff;
   font-weight: bold;
-  font-family: $montserrat;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
   padding-top: 30px;
   position: absolute;
@@ -44,22 +43,68 @@ body {
   top: 25%;
   left: -100%;
   opacity: 1;
-  .come{
-    transform: scale(2);
-  }
+  box-sizing: border-box;
 }
 
+
 @keyframes move_div {
-  0%   {left: 0;
-        transform: rotate(0deg);}
-  50%  {left: 40%;
-        transform: rotate(360deg);
-        width: 20%;
-        height: 35%;
-        font-size: 50px;
-        padding-top: 8%;
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+    width: 200px;
+    height: 200px;
   }
+  50% {
+    left: 0%;
+    transform: rotate(360deg);
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    padding-top: 8%;
+    top: 0;
+  }
+  100% {
+    left: -100%;
+    transform: rotate(360deg);
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    padding-top: 8%;
+    top: 0;
+  }
+
 }
+//.pre_loader{
+//  width: 5%;
+//  height: 15%;
+//  background-color: #0f253c;
+//  color: #ffffff;
+//  font-weight: bold;
+//  font-family: $montserrat;
+//  text-align: center;
+//  padding-top: 30px;
+//  position: absolute;
+//  z-index: 5;
+//  animation: move_div 10s;
+//  top: 25%;
+//  left: -100%;
+//  opacity: 1;
+//  .come{
+//    transform: scale(2);
+//  }
+//}
+//
+//@keyframes move_div {
+//  0%   {left: 0;
+//        transform: rotate(0deg);}
+//  50%  {left: 40%;
+//        transform: rotate(360deg);
+//        width: 20%;
+//        height: 35%;
+//        font-size: 50px;
+//        padding-top: 8%;
+//  }
+//}
 
 
 .change {
